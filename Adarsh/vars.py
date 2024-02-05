@@ -31,12 +31,12 @@ class Var(object):
     FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
     HAS_SSL=bool(getenv('HAS_SSL', True))
     if HAS_SSL:
-        URL = "https://{}/".format(FQDN)
+        URL = "https://vifhb-z80b.onrender.com/".format(FQDN)
     else:
-        URL = "http://{}/".format(FQDN)
+        URL = "https://vifhb-z80b.onrender.com/".format(FQDN)
     DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://Aman:aman@cluster0.cnjkitd.mongodb.net/?retryWrites=true&w=majority'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'MOVIEBOTUPDETA'))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1002055043634")).split()))
-    SHORTLINK_URL = getenv('SHORTLINK_URL', 'tnshort.net')
-    SHORTLINK_API = getenv('SHORTLINK_API', '0c8ebd63bfe9f67f9970b8767498ff60316b9b03')
-    TUTORIAL_URL = getenv('TUTORIAL_URL', 'https://youtu.be/rddlpYLm0G0')    
+    SHORTLINK_URL = getenv('SHORTLINK_URL', '')
+    SHORTLINK_API = getenv('SHORTLINK_API', '')
+    TUTORIAL_URL = getenv('TUTORIAL_URL', '')    
